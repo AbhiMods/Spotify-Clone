@@ -24,7 +24,7 @@
             <div class="home-icon"><i class="fa-solid fa-house"></i></div>
             <div class="search-bar">
                 <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                <input type="text" class="input-box" placeholder="What do you want to play?">
+                <input type="text" class="input-box" id="searchInput" placeholder="What do you want to play?">
                 <div class="browse"><i class="fa-solid fa-folder-open"></i></div>
             </div>
         </div>
@@ -39,8 +39,21 @@
                 <div class="nav-text">Sign up</div>
                 <button class="login-btn">Log in</button>
             </div>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></div>
+        <a href="#">Premium</a>
+        <a href="#">Support</a>
+        <a href="#">Download</a>
+        <a href="#">Sign up</a>
+        <a href="#">Log in</a>
+    </div>
 
     <!-- Main - left part -->
     <div class="main">
@@ -57,7 +70,7 @@
                     <button>Create playlist</button>
                 </div>
                 <div class="box">
-                    <div class="box">
+                    <div class="box-inner">
                         <h4>Let's find some podcast to follow</h4>
                         <p>We'll keep you updated on new updates</p>
                         <button>Browse podcasts</button>
@@ -71,13 +84,15 @@
         <div class="main-right-part">
             <div class="music-section">
                 <h2>Popular songs</h2>
-                <div class="songs">
+                <div class="songs" id="popularSongs">
+                    <!-- Songs will be populated by JS or keep existing structure but add heart -->
                     <div class="music-card">
                         <img src="Images/1.jpg">
                         <div class="music-play-btn"><i id="1" class="playMusic fa-solid fa-circle-play"></i></div>
                         <div class="img-title">Guitar Song</div>
                         <div class="img-description">The best guitar music to relax your mind</div>
                     </div>
+                    <!-- ... (keeping other static cards for now, will be dynamic or just styled) ... -->
                     <div class="music-card">
                         <img src="Images/2.jpg">
                         <div class="music-play-btn"><i id="2" class="playMusic fa-solid fa-circle-play"></i></div>
@@ -96,23 +111,11 @@
                         <div class="img-title">Guitar Song</div>
                         <div class="img-description">The best guitar music to relax your mind</div>
                     </div>
-                    <div class="music-card">
-                        <img src="Images/1.jpg">
-                        <div class="music-play-btn"><i id="5" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/2.jpg">
-                        <div class="music-play-btn"><i id="6" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
                 </div>
             </div>
 
             <div class="music-section">
-                <h2>Recomended songs</h2>
+                <h2>Recommended songs</h2>
                 <div class="songs">
                     <div class="music-card">
                         <img src="Images/4.jpg">
@@ -123,72 +126,6 @@
                     <div class="music-card">
                         <img src="Images/3.jpg">
                         <div class="music-play-btn"><i id="8" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/2.jpg">
-                        <div class="music-play-btn"><i id="9" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/1.jpg">
-                        <div class="music-play-btn"><i id="10" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/4.jpg">
-                        <div class="music-play-btn"><i id="11" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/3.jpg">
-                        <div class="music-play-btn"><i id="12" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="music-section">
-                <h2>Rescently played</h2>
-                <div class="songs">
-                    <div class="music-card">
-                        <img src="Images/1.jpg">
-                        <div class="music-play-btn"><i id="13" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/2.jpg">
-                        <div class="music-play-btn"><i id="14" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/3.jpg">
-                        <div class="music-play-btn"><i id="15" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/4.jpg">
-                        <div class="music-play-btn"><i id="16" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/1.jpg">
-                        <div class="music-play-btn"><i id="17" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guitar Song</div>
-                        <div class="img-description">The best guitar music to relax your mind</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="Images/2.jpg">
-                        <div class="music-play-btn"><i id="18" class="playMusic fa-solid fa-circle-play"></i></div>
                         <div class="img-title">Guitar Song</div>
                         <div class="img-description">The best guitar music to relax your mind</div>
                     </div>
@@ -207,6 +144,7 @@
                 <div class="img-title-info">Title 1</div>
                 <div class="img-des-info">this is description for title 1 song</div>
             </div>
+            <i class="fa-regular fa-heart like-btn" id="likeBtn"></i>
         </div>
         <div class="music-controller">
             <div class="player">
@@ -217,11 +155,16 @@
                 <div><i id="repeat" class="player-btns fa-solid fa-repeat"></i></div>
             </div>
 
-            <div>
+            <div class="progress-container">
+                <span id="currentTime">0:00</span>
                 <input type="range" id="progressBar" value="0">
+                <span id="totalTime">0:00</span>
             </div>
         </div>
-        <div></div>
+        <div class="volume-controls">
+            <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+            <input type="range" id="volumeBar" min="0" max="100" value="100">
+        </div>
     </div>
     <script src="script.js"></script>
 
